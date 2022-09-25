@@ -1,0 +1,11 @@
+!pip install yfinance==0.1.67
+
+import yfinance as yf
+import pandas as pd
+
+amd = yf.Ticker("AMD")
+amd_info= amd.info
+amd_info
+amd_info['country']
+amd_share_price = amd.history(period="max")
+amd_share_price.head()
